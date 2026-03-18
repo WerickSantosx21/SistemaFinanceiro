@@ -1,5 +1,4 @@
-# DevFinance
-
+# Sistema Financeiro
 Sistema de controle financeiro simples desenvolvido com:
 
 - Python
