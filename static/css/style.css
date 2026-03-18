@@ -1,0 +1,164 @@
+body{
+
+font-family: Arial;
+background:#0f172a;
+color:white;
+margin:0;
+
+}
+
+.app{
+
+width:800px;
+margin:auto;
+padding:30px;
+
+}
+
+h1{
+
+text-align:center;
+margin-bottom:30px;
+
+}
+
+.dashboard{
+
+display:flex;
+gap:20px;
+justify-content:space-between;
+margin-bottom:30px;
+
+}
+
+.card{
+
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+flex:1;
+text-align:center;
+
+}
+
+.form-container{
+
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin-bottom:30px;
+
+}
+
+input,select{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:6px;
+border:none;
+
+}
+
+button{
+
+background:#3b82f6;
+border:none;
+padding:10px;
+color:white;
+width:100%;
+border-radius:6px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#2563eb;
+
+}
+
+.transactions{
+
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+th,td{
+
+padding:10px;
+text-align:left;
+
+}
+
+tr{
+
+border-bottom:1px solid #334155;
+
+}
+
+.income{
+
+color:#22c55e;
+
+}
+
+.expense{
+
+color:#ef4444;
+
+}
+
+.delete-btn{
+
+background:#ef4444;
+border:none;
+padding:5px 10px;
+color:white;
+cursor:pointer;
+border-radius:5px;
+
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  background: #3b82f6;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #2563eb;
+}
+
+.flash-container {
+  margin-bottom: 20px;
+}
+
+.flash {
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.flash.error {
+  background: #f87171;
+  color: #1f2937;
+}
+
+.flash.success {
+  background: #34d399;
+  color: #0f172a;
+}

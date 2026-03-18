@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Registro - Sistema Financeiro{% endblock %}
+
+{% block content %}
+<div class="form-container">
+  <h1>Registro</h1>
+  <form method="post" action="{{ url_for('auth.register') }}">
+    <input type="text" name="username" placeholder="Usuário" required />
+    <input type="password" name="password" placeholder="Senha" required />
+    <button type="submit">Criar conta</button>
+  </form>
+  <p class="small">
+    Já tem conta? <a href="{{ url_for('auth.login') }}">Faça login</a>
+  </p>
+</div>
+{% endblock %}

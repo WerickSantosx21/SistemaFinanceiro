@@ -1,0 +1,60 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Dashboard - Sistema Financeiro{% endblock %}
+
+{% block content %}
+<h1>DevFinance Dashboard</h1>
+
+<div class="dashboard">
+  <div class="card">
+    <strong>Olá, {{ current_user.username }}</strong>
+  </div>
+  <div class="card">
+    <a class="button" href="{{ url_for('auth.logout') }}">Sair</a>
+  </div>
+</div>
+
+<div class="form-container">
+  <div class="dashboard">
+    <div>
+      <label for="month-filter">Filtrar por mês</label>
+      <select id="month-filter">
+        <option value="">Todos os meses</option>
+        {% for num, name in [(1,'Janeiro'),(2,'Fevereiro'),(3,'Março'),(4,'Abril'),(5,'Maio'),(6,'Junho'),(7,'Julho'),(8,'Agosto'),(9,'Setembro'),(10,'Outubro'),(11,'Novembro'),(12,'Dezembro')] %}
+        <option value="{{ num }}">{{ name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  <form id="form">
+    <input type="text" id="description" placeholder="Descrição" required>
+    <input type="number" id="amount" step="0.01" placeholder="Valor" required>
+    <select id="type">
+      <option value="income">Receita</option>
+      <option value="expense">Despesa</option>
+    </select>
+    <button>Adicionar</button>
+  </form>
+
+  <div class="transactions">
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+          <th>Data</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="table"></tbody>
+    </table>
+  </div>
+
+  <canvas id="chart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}
